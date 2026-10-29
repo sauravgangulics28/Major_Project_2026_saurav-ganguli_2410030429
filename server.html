@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Placement Dashboard</title>
+    <link rel="stylesheet" href="server.css">
+</head>
+<body>
+
+    <header>
+        <h1>Container Placement Dashboard</h1>
+        <p>ML-Based Server Resource Utilization</p>
+    </header>
+
+    <main>
+        <section class="stats">
+            <div class="card">
+                <h3>Total Servers</h3>
+                <p>3</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Containers</h3>
+                <p>6</p>
+            </div>
+
+            <div class="card">
+                <h3>CPU Utilization</h3>
+                <p>66.7%</p>
+            </div>
+
+            <div class="card">
+                <h3>RAM Utilization</h3>
+                <p>54.2%</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Place a Container</h2>
+
+            <label for="name">Container Name</label>
+            <input id="name" type="text"
+                   placeholder="e.g. Container G">
+
+            <label for="cpu">CPU Requirement</label>
+            <input id="cpu" type="number" min="1"
+                   placeholder="e.g. 2">
+
+            <label for="ram">RAM Requirement (GB)</label>
+            <input id="ram" type="number" min="1"
+                   placeholder="e.g. 4">
+
+            <button id="runButton">Run Placement</button>
+
+            <p id="result">Your result will appear here.</p>
+        </section>
+
+        <section class="panel">
+            <h2>Server Overview</h2>
+            <div class="server">
+                <h3>Server 1</h3>
+                <p>CPU: 8 units | RAM: 16 GB</p>
+            </div>
+
+            <div class="server">
+                <h3>Server 2</h3>
+                <p>CPU: 8 units | RAM: 16 GB</p>
+            </div>
+
+            <div class="server">
+                <h3>Server 3</h3>
+                <p>CPU: 8 units | RAM: 16 GB</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="server.js"></script>
+</body>
+</html>
